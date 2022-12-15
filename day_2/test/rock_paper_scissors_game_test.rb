@@ -4,7 +4,6 @@ require_relative "/advent_of_code_2022/day_2/lib/translator"
 require_relative "/advent_of_code_2022/day_2/lib/translated_file"
 require_relative "/advent_of_code_2022/day_2/lib/rock_paper_scissors_game"
 
-
 class RockPaperScissorGameTest < Minitest::Test
   def setup
     @part_one_game_strategy = RockPaperScissorGame.new(

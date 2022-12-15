@@ -7,9 +7,9 @@ class TranslatorTest < Minitest::Test
   def setup
     yaml = YAML.load_file("/advent_of_code_2022/day_2/test/test_config.yml")
     @hash_translator = Translator.new(
-      { 
+      {
         "A" => 1,
-        "Hello, World" => "Hola, Mundo", 
+        "Hello, World" => "Hola, Mundo",
         2 => 10,
         [1, 2] => [1, 10],
         :B => :b

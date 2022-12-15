@@ -24,7 +24,7 @@ class RockPaperScissorGame
   end
 
   def translated_input_data
-    input_data.map do |line| 
+    input_data.map do |line|
       x, y = line.split(" ").map { |i| i.to_i - 1 }
       @point_matrix[x][y]
     end
