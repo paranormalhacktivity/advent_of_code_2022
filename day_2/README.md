@@ -1,4 +1,6 @@
---- Day 2: Rock Paper Scissors ---
+# Challenge
+
+## --- Day 2: Rock Paper Scissors ---
 
 The Elves begin to set up camp on the beach. To decide whose tent gets to be closest to the snack storage, a giant Rock Paper Scissors tournament is already in progress.
 
@@ -32,7 +34,7 @@ What would your total score be if everything goes exactly according to your stra
 
 Answer: 13052
 
---- Part Two ---
+## --- Part Two ---
 
 The Elf finishes helping with the tent and sneaks back over to you. "Anyway, the second column says how the round needs to end: X means you need to lose, Y means you need to end the round in a draw, and Z means you need to win. Good luck!"
 
@@ -50,7 +52,7 @@ Answer: 13693
 
 # Solution
 
-# First iteration
+## First iteration
 In the first iteration, I was pretty happy with the code that I had written. I felt that it was pretty clean and 
 had a couple parts that could be adopted for reuse. The reuse value on this challenge felt pretty low, there was
 a lot more domain and application logic than in the first one, and made for all around less "useful" code. The parts
@@ -76,7 +78,7 @@ allowing  it to pass the test data, but not work on the real data set. I wasn't 
 when he told me. Plus that led me down a path of figuring out how to get rid of a nasty conditional, which I was ultimately
 able to do with a matrix.
 
-# Second iteration
+## Second iteration
 Second iteration didn't change much from the first. I realized that with the scope creep introduced in
 part 2, that I could still solve the challenge using a matrix, I just needed to be able to use a different matrix
 than in part 1. I first approached this by introducing a new "RoundScore" class, that could be used as a strategy

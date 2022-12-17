@@ -1,4 +1,6 @@
---- Day 3: Rucksack Reorganization ---
+# Challenge
+
+## --- Day 3: Rucksack Reorganization ---
 
 One Elf has the important job of loading all of the rucksacks with supplies for the jungle journey. Unfortunately, that Elf didn't quite follow the packing instructions, and so a few items now need to be rearranged.
 
@@ -37,7 +39,7 @@ Find the item type that appears in both compartments of each rucksack. What is t
 
 Answer: 8139
 
---- Part Two ---
+## --- Part Two ---
 
 As you finish identifying the misplaced items, the Elves come to you with another issue.
 
@@ -49,15 +51,19 @@ Additionally, nobody wrote down which item type corresponds to each group's badg
 
 Every set of three lines in your list corresponds to a single group, but each group can have a different badge item type. So, in the above example, the first group's rucksacks are the first three lines:
 
+```
 vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
 PmmdzqPrVvPwwTWBwg
+```
 
 And the second group's rucksacks are the next three lines:
 
+```
 wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
 ttgJtRGJQctTZtZT
 CrZsJsPPZsGzwwsLwLmpwMDw
+```
 
 In the first group, the only item type that appears in all three rucksacks is lowercase r; this must be their badges. In the second group, their badge item type must be Z.
 
@@ -67,7 +73,9 @@ Find the item type that corresponds to the badges of each three-Elf group. What 
 
 Answer: 2668
 
-# First iteration
+# Solution
+
+## First iteration
 
 Oof! This one was a doozy for some reason. With me trying to challenge myself to write clean, possibly reusable code for these 
 simple challenges, I astronauted the solution which is really what caused most of my pain. The problem itself was fairly simple
@@ -93,7 +101,7 @@ sets to see which characters were common. I could then take the intersection of 
 `Translator` class, which was a class reused from `day_2`. This translator, would then translate the common letters between the sets to their 
 priority numbers, which I could later add up to get a sum of the total priorities. Job well done! Or so I thought(-_-)...
 
-# Second iteration
+## Second iteration
 Part two completely broke down what I initially had. I could no longer rely on needing the common items within the compartments(halves) in a single
 rucksack(line), I now needed to be able to compare across multiple rucksacks(lines). Which was not at all what I anticipated. Which is why they call
 it "scope creep" I guess. Anyway, now I had to rethink a good portion of my solution, which just so happened to be the parsing aspect. So I now needed
